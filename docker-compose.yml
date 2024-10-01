@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  freeswitch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - SIGNALWIRE_TOKEN=${SIGNALWIRE_TOKEN}
+    env_file:
+      - .env
+    ports:
+      - "5060:5060/udp"
+      - "5060:5060/tcp"
+      - "5080:5080/tcp"
+      - "8021:8021/tcp"
+    volumes:
+      - ./freeswitch-config:/usr/local/freeswitch/conf
+      - ./freeswitch-logs:/usr/local/freeswitch/log
+    restart: unless-stopped
