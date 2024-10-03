@@ -96,7 +96,7 @@ endpoints/mod_rtc
 #endpoints/mod_rtmp
 endpoints/mod_skinny
 endpoints/mod_sofia
-endpoints/mod_verto
+endpoints/mod_verto # has a builtin HTTP server so it is possible to build restfule APIs
 event_handlers/mod_amqp # amqp server like rabbitmq and listen for api commands
 event_handlers/mod_cdr_csv
 #event_handlers/mod_cdr_mongodb
