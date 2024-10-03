@@ -22,11 +22,9 @@ COPY freeswitch-src /freeswitch-src
 
 # Build and install FreeSWITCH
 WORKDIR /freeswitch-src
-RUN git config pull.rebase true \
-    && ./bootstrap.sh -j \
-    && ./configure \
-    && make \
-    && make install
+RUN ./bootstrap.sh -j
+RUN ./configure 
+RUN make && make install
 
 # Set the working directory
 WORKDIR /usr/local/freeswitch

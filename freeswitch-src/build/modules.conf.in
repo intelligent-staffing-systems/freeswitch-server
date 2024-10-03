@@ -1,6 +1,6 @@
 #applications/mod_abstraction
 applications/mod_av
-#applications/mod_avmd
+applications/mod_avmd
 #applications/mod_bert
 #applications/mod_blacklist
 #applications/mod_callcenter
@@ -17,9 +17,9 @@ applications/mod_dptools
 #applications/mod_easyroute
 applications/mod_enum
 applications/mod_esf
-#applications/mod_esl
+applications/mod_esl
 applications/mod_expr
-applications/mod_fifo
+# applications/mod_fifo
 #applications/mod_fsk
 applications/mod_fsv
 applications/mod_hash
@@ -97,10 +97,10 @@ endpoints/mod_rtc
 endpoints/mod_skinny
 endpoints/mod_sofia
 endpoints/mod_verto
-#event_handlers/mod_amqp
+event_handlers/mod_amqp # amqp server like rabbitmq and listen for api commands
 event_handlers/mod_cdr_csv
 #event_handlers/mod_cdr_mongodb
-#event_handlers/mod_cdr_pg_csv
+event_handlers/mod_cdr_pg_csv
 event_handlers/mod_cdr_sqlite
 #event_handlers/mod_erlang_event
 #event_handlers/mod_event_multicast

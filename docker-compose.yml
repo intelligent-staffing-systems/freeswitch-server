@@ -15,6 +15,7 @@ services:
       - "5080:5080/tcp"
       - "8021:8021/tcp"
     volumes:
-      - ./freeswitch-config:/usr/local/freeswitch/conf
-      - ./freeswitch-logs:/usr/local/freeswitch/log
+      - ./freeswitch-src/conf:/usr/local/freeswitch/conf
     restart: unless-stopped
+    user: root
+    command: ./bin/freeswitch 
